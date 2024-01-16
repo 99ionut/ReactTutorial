@@ -24,7 +24,8 @@ function Booklist(){
 }
 
 
-const Book = ({title, author, children}) =>{
+const Book = (props) =>{
+  const {title, author, children} = props;
   return (
     <section style={{color:"red", fontWeight:"bold"}}>
       <h1>{title}</h1>
