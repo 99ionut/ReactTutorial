@@ -31,10 +31,9 @@ const books = [
 function Booklist(){
     return (
       <div>
-        {books.map((book)=>{
-          const {title, author} = book;
+        {books.map((book, index)=>{
           return(
-            <Book key={book.id} book={book}/>
+            <Book key={book.id} {...book} />
           );
         })}
       </div>
@@ -44,7 +43,7 @@ function Booklist(){
 
 
 const Book = (props) =>{
-  const {title, author} = props.book;
+  const {title, author} = props;
   return (
     <section style={{color:"red", fontWeight:"bold"}}>
       <h1>{title}</h1>
