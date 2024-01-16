@@ -13,21 +13,20 @@ function Booklist(){
     return (
       <div>
         <Book/>
-        <Title/>
       </div>
       
     )
 }
-const Title = () =>{
-  return <section style={{color:"blue"}}>
-    title
-  </section>
-}
 
+let author = "BOOK AUTHOR";
 const Book = () =>{
-  return <section style={{color:"red", fontWeight:"bold", fontSize:"30px"}}>
-    book
-  </section>
+  let title = "BOOK TITLE";
+  return (
+    <section style={{color:"red", fontWeight:"bold"}}>
+      <h1>{title}</h1>
+      <h4>{author}</h4>
+    </section>
+  )
 }
 
 //cerca cosa c'è da renderizzare e dove
