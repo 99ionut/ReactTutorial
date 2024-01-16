@@ -18,17 +18,22 @@ const books = [
   {
     title:"bbbb",
     author:"kkkkk99"
+  },
+  {
+    title:"CCCC",
+    author:"523532"
   }
 ];
 
-const names = ["jon","arc","pot"];
-const newName = names.map((name)=>{
-  return <h1>{name}</h1>
-})
 function Booklist(){
     return (
       <div>
-        {newName}
+        {books.map((book)=>{
+          const {title, author} = book;
+          return(
+            <Book title={title} author={author}/>
+          );
+        })}
       </div>
       
     )
