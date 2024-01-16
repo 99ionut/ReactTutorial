@@ -10,14 +10,25 @@ import "./index.css";
 //vars
 let author = "BOOK AUTHOR";
 
+const books = [
+  {
+    title:"aaa",
+    author:"ewqeqwe"
+  },
+  {
+    title:"bbbb",
+    author:"kkkkk99"
+  }
+];
+
+const names = ["jon","arc","pot"];
+const newName = names.map((name)=>{
+  return <h1>{name}</h1>
+})
 function Booklist(){
     return (
       <div>
-        <Book title="ok1 we" author="gggg">
-          <p>Paragrafo solo primo elemento</p>
-        </Book>
-        <Book title="oeqwe f" author="ppp"></Book>
-        <Book title="o 2323 2" author="twrwr"></Book>
+        {newName}
       </div>
       
     )
@@ -25,13 +36,12 @@ function Booklist(){
 
 
 const Book = (props) =>{
-  const {title, author, children} = props;
+  const {title, author} = props;
   return (
     <section style={{color:"red", fontWeight:"bold"}}>
       <h1>{title}</h1>
       <h4>{author}</h4>
       <p>{6 + 6}</p>
-      {children}
       <p>--------------</p>
     </section>
   )
