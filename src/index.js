@@ -25,6 +25,10 @@ const Book = () =>{
     <section style={{color:"red", fontWeight:"bold"}}>
       <h1>{title}</h1>
       <h4>{author}</h4>
+    
+    {/* questo non va <p>{let x = 6}</p> perchè non è un'espressione*/}
+    <p>{6 + 6}</p>
+    {/* questo si oppure author.toUpperCase() */}
     </section>
   )
 }
