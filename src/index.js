@@ -13,19 +13,19 @@ let author = "BOOK AUTHOR";
 function Booklist(){
     return (
       <div>
-        <Book title="ok1 we"/>
-        <Book title="oeqwe f"/>
-        <Book title="o 2323 2"/>
+        <Book title="ok1 we" author="gggg"/>
+        <Book title="oeqwe f" author="ppp"/>
+        <Book title="o 2323 2" author="twrwr"/>
       </div>
       
     )
 }
 
 
-const Book = (props) =>{
+const Book = ({title, author}) =>{
   return (
     <section style={{color:"red", fontWeight:"bold"}}>
-      <h1>{props.title}</h1>
+      <h1>{title}</h1>
       <h4>{author}</h4>
       <p>{6 + 6}</p>
     </section>
