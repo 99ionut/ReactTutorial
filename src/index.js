@@ -12,14 +12,17 @@ let author = "BOOK AUTHOR";
 
 const books = [
   {
+    id:1,
     title:"aaa",
     author:"ewqeqwe"
   },
   {
+    id:2,
     title:"bbbb",
     author:"kkkkk99"
   },
   {
+    id:3,
     title:"CCCC",
     author:"523532"
   }
@@ -31,7 +34,7 @@ function Booklist(){
         {books.map((book)=>{
           const {title, author} = book;
           return(
-            <Book title={title} author={author}/>
+            <Book key={book.id} book={book}/>
           );
         })}
       </div>
@@ -41,7 +44,7 @@ function Booklist(){
 
 
 const Book = (props) =>{
-  const {title, author} = props;
+  const {title, author} = props.book;
   return (
     <section style={{color:"red", fontWeight:"bold"}}>
       <h1>{title}</h1>
