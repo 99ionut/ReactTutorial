@@ -5,30 +5,29 @@ import ReactDOM from 'react-dom';
 
 //CSS
 import "./index.css";
-
 //la funzione deve avere la prima lettera grande cosi react sa che è un componente
-//ritorno html (jsx)
+
+//vars
+let author = "BOOK AUTHOR";
 
 function Booklist(){
     return (
       <div>
-        <Book/>
+        <Book title="ok1 we"/>
+        <Book title="oeqwe f"/>
+        <Book title="o 2323 2"/>
       </div>
       
     )
 }
 
-let author = "BOOK AUTHOR";
-const Book = () =>{
-  let title = "BOOK TITLE";
+
+const Book = (props) =>{
   return (
     <section style={{color:"red", fontWeight:"bold"}}>
-      <h1>{title}</h1>
+      <h1>{props.title}</h1>
       <h4>{author}</h4>
-    
-    {/* questo non va <p>{let x = 6}</p> perchè non è un'espressione*/}
-    <p>{6 + 6}</p>
-    {/* questo si oppure author.toUpperCase() */}
+      <p>{6 + 6}</p>
     </section>
   )
 }
