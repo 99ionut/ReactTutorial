@@ -1,17 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+//serve a injectare il JS nell'html
+import ReactDOM from 'react-dom';
+//questo file è un js entry point
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+//la funzione deve avere la prima lettera grande cosi react sa che è un componente
+//ritorno html (jsx)
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Greetings(){
+    return <h1>ciao</h1>
+}
+
+//cerca cosa c'è da renderizzare e dove
+ReactDOM.render(<Greetings/>, document.getElementById("root"));
+
