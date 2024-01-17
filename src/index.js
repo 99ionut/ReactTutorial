@@ -43,17 +43,13 @@ function Booklist(){
 
 
 const Book = (props) =>{
-  //event handler
-  const clickHandler = () =>{
-    alert("hello");
-  }
   const {title, author} = props;
   return (
     <section style={{color:"red", fontWeight:"bold"}}>
       <h1>{title}</h1>
       <h4>{author}</h4>
       <p>{6 + 6}</p>
-      <button type='button' onClick={clickHandler}>PRESS</button>
+      <button type='button' onClick={()=>{alert(title)}}>PRESS</button>
       <p>--------------</p>
     </section>
   )
