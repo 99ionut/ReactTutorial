@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';//questo file è un js entry point
 
 //import books func from books file
 import {books} from './books.js'
-
+//this import can be named whatever
 import DifferentBookName from './book.js'
 //CSS
 import "./index.css";
