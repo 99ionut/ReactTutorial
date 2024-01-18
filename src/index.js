@@ -41,6 +41,9 @@ function Booklist(){
     )
 }
 
+const complexExample = (author) =>{
+  console.log(author);
+}
 
 const Book = (props) =>{
   const {title, author} = props;
@@ -50,6 +53,7 @@ const Book = (props) =>{
       <h4>{author}</h4>
       <p>{6 + 6}</p>
       <button type='button' onClick={()=>{alert(title)}}>PRESS</button>
+      <button type='button' onClick={() => complexExample(title)}>more complex example</button>
       <p>--------------</p>
     </section>
   )
