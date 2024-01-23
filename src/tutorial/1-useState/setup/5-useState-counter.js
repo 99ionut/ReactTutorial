@@ -8,7 +8,7 @@ const UseStateCounter = () => {
     setTimeout(()=>{
       //setValue(value+1);
 
-      //function in setValue allows you to get current value, you can use it for prev. examples as well
+      //function in setValue allows you to get current value, you can use it for prev. examples as well, whatever u return is the new val.
       setValue((prevState)=>{
         return prevState + 1;
       });

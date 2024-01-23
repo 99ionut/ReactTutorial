@@ -2,8 +2,25 @@ import React, { useState, useEffect } from 'react';
 // by default runs after every re-render
 // cleanup function
 // second parameter
+
+////USE EFFECT =  work outside of component
 const UseEffectBasics = () => {
-  return <h2>useEffect Basics</h2>;
+  const [value,setValue] = useState(0);
+
+  //runs after every render (side effects)
+  useEffect(()=>{
+    console.log("callse useEffect");
+    document.title = `val ${value}` ;
+  });
+
+  //called 2 times because of react strict mode in app.js
+  console.log("render");
+  return (
+  <>
+  <h1>{value}</h1>
+  <button onClick={()=>setValue(value+1)}>Increase</button>
+  </>
+  );
 };
 
 export default UseEffectBasics;
