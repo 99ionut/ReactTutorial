@@ -14,7 +14,15 @@ const UseEffectBasics = () => {
     if(value>=1){
       document.title = `val ${value}`;
     }
-  });
+    
+    //empty second parameter (array) means it will run only on the initial render.
+    //you can fill it with dependencies (values that if updated call this function)
+  }, [value]);
+
+  //you can have as many useEffect as you want
+  useEffect(()=>{
+    console.log("callse Hello world, just first run");
+  }, []);
 
   //called 2 times because of react strict mode in app.js
   console.log("render");
