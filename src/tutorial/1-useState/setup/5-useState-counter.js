@@ -6,7 +6,12 @@ const UseStateCounter = () => {
   /*clicking 3 times doesnt work*/
   const complexIncrease = () => {
     setTimeout(()=>{
-      setValue(value+1);
+      //setValue(value+1);
+
+      //function in setValue allows you to get current value, you can use it for prev. examples as well
+      setValue((prevState)=>{
+        return prevState + 1;
+      });
     },2000)
   }
 
