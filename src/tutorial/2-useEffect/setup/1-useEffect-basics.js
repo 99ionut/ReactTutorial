@@ -8,9 +8,12 @@ const UseEffectBasics = () => {
   const [value,setValue] = useState(0);
 
   //runs after every render (side effects)
+  //its a hook
   useEffect(()=>{
     console.log("callse useEffect");
-    document.title = `val ${value}` ;
+    if(value>=1){
+      document.title = `val ${value}`;
+    }
   });
 
   //called 2 times because of react strict mode in app.js
