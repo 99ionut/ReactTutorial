@@ -4,25 +4,20 @@ import React, { useState } from 'react';
 
 const ShortCircuit = () => {
   const [text,setText] = useState("");
-  const firstValue = text || "hello world";
-  const secondValue = text && "hello world";
+  const [isError,setIsError] = useState(false);
 
   return (
   <>
-    <h1>first: {firstValue}</h1>
-    <h1>second: {secondValue}</h1>
-  {
-  //this doesnt work, we need an expression that returns a value
-  //if(){console.log("hello world")}
-  }
+    <button onClick={()=>setIsError(true)}>toggle error</button>
     {
       //this ALWASY return something, either text or something else
     }
-    <h1>{text || "default text"}</h1>
+    <h1>{isError || "default text"}</h1>
     {
       //this returns ONLY return if text is true
     }
-    <h1>{text && <h1>Hello world</h1>}</h1>
+    <h1>{isError && <h1>Error...</h1>}</h1>
+    {isError ? <h1>error is true</h1> : <h1>error is false</h1>}
   </>
   );
 };
