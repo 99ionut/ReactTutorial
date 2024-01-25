@@ -5,8 +5,35 @@ import React, { useState } from 'react';
 // React
 // value, onChange
 
+
+//either onSubmit on the form or onClick on the button
 const ControlledInputs = () => {
-  return <h1>controlled inputs</h1>;
+  const [firstName, setFirstName] = useState("");
+  const [email,setEmail] = useState("");
+  
+
+  const handleSubmit = (e) => {
+    //prevent page refresh on form submit
+    e.preventDefault();
+    console.log(firstName,email);
+  }
+
+  //value on form depends on a state value
+  return(
+    <>
+      <form onSubmit={handleSubmit}>
+        <div>
+          <label htmlFor="firstName">Name: </label>
+          <input type='text' id="firstName" name="firstName" value={firstName} onChange={(e)=>setFirstName(e.target.value)}/>
+        </div>
+        <div>
+          <label htmlFor="email">Email: </label>
+          <input type='text' id="email" name="email" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+        </div>
+        <button type='submit'>add person</button>
+      </form>
+    </>
+  )
 };
 
 export default ControlledInputs;
