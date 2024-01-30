@@ -1,13 +1,29 @@
 import React from 'react';
+import PropTypes from "prop-types"
+import defaultImage from "../../../assets/default-image.jpeg"
 
 const Product = ({image,name,price}) => {
-  return <article className='product'>
+  return (
+  <article className='product'>
     <h4>{name}</h4>
     {//last API obj doesnt have a price, if you work with APIs expect this to happen. Youll get an error if you dont plan
+    //the last one also doesnt have an img so when you iterate you will get: Cannot read properties of undefined (reading 'url')
     }
     <img src={image.url}/>
     <p>{price}</p>
-  </article>;
+  </article>
+  );
 };
+
+Product.propTypes = {
+  image:PropTypes.object.isRequired,
+  name:PropTypes.string.isRequired,
+  price:PropTypes.number.isRequired
+}
+Product.defaultProps = {
+  name: "default name",
+  price: 0.00,
+  image: defaultImage
+}
 
 export default Product;
