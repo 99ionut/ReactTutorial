@@ -42,6 +42,8 @@ const Index = () => {
   )
 }
 
+//useMemeo doesnt rerender this list if you update for example the "count" state variable
+//useful for big lists that doesnt need to be rerendered every time.
 const BigList = React.memo(({ products, addToCart }) => {
   // useEffect(() => {
   //   console.count('hello from big list');
