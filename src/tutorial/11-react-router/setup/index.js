@@ -15,7 +15,7 @@ const ReactRouterSetup = () => {
   }
   return (
   <Router>
-    
+
     <Navbar/>
 
     {
@@ -31,6 +31,9 @@ const ReactRouterSetup = () => {
       </Route>
       <Route path="/people">
         <People/>
+      </Route>
+      <Route path="/:id" children={<Person/>}>
+
       </Route>
       <Route path="*">
         <Error/>
